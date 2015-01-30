@@ -1,0 +1,18 @@
+<h1>You're so pretentious, you have to post all your music on the Internet.</h1>
+
+<form action="/" method="post">
+  <label for="artist">Artist</label>
+  <input id="artist" name="artist" type="text">
+  <label for="album">Album</label>
+  <input id="album" name="album" type="text">
+
+  <button type="submit">I'm a Hipster</button>
+</form>
+
+<h3>I'll bet you were into these way before they were cool</h3>
+
+<ul>
+  <% @cds.each() do |cd| %>
+    <li><a href="/results/<%= cd.id() %>"><%= cd.artist() %></a></li>
+    <% end %>
+</ul>

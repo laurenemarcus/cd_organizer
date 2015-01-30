@@ -1,0 +1,19 @@
+<h1>Have the bootleg too?</h1>
+
+<form action="/results" method="post">
+
+  <input id="album_id" name="album_id" type="hidden" value="<%= @album_id() %>"
+  
+  <label for="more_albums">Add more albums here</label>
+  <input id="more_albums" name="more_albums" type="text">
+
+  <button type="submit">I'm still a Hipster</button>
+</form>
+
+<h3>I'll bet you were into these way before they were cool</h3>
+
+<ul>
+  <% @cds.each() do |cd| %>
+    <li><%= cd.albums() %></a></li>
+    <% end %>
+</ul>
